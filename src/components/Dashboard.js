@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import CountryView from './CountryView';
 import GameView from './GameView';
-import {csv} from 'd3-request';
-import data from './../gamedata.csv';
 import CountryAndGameView from './CountryAndGameView';
 import {Link,BrowserRouter as Router, Redirect, Route} from 'react-router-dom'
 import FileUpload from './FileUpload';
