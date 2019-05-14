@@ -16,7 +16,7 @@ class FileUpload extends Component{
 
     onChange = (e)=>{
         let files=e.target.files;
-        console.log(files);
+        //console.log(files);
         let reader=new FileReader();
         reader.readAsDataURL(files[0]);
         
@@ -24,7 +24,7 @@ class FileUpload extends Component{
         if(extension.toLowerCase()==='csv'){
             this.setState({displayText:files[0].name})
             reader.onload=(e)=>{
-                console.log(e.target.result)
+                //console.log(e.target.result)
                 csv(e.target.result,(error,data)=>{
                     if(!error){
                         console.log(data)
@@ -38,7 +38,7 @@ class FileUpload extends Component{
             }
         }else{
             this.setState({invalidFile:true})
-            console.log('Please upload a CSV file')
+            //console.log('Please upload a CSV file')
         }
 
         

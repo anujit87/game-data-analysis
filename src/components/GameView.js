@@ -38,7 +38,7 @@ class GameView extends Component{
             revArray.push(revPerDay)
             dauArray.push(dauPerDay);
         }
-        console.log(dauArray)
+        //console.log(dauArray)
         this.setState({revArray:revArray,dauArray:dauArray},()=>{
             this.createChart();
         })
@@ -100,7 +100,7 @@ class GameView extends Component{
                 data:this.state.dauArray[index]
             }]
         })
-        console.log(seriesData.flat())
+        //console.log(seriesData.flat())
         return seriesData.flat();
     }
 
@@ -110,7 +110,7 @@ class GameView extends Component{
     }
 
     componentDidUpdate(prevProps){
-        console.log(this.props)
+        //console.log(this.props)
         if(this.props.graphData!==prevProps.graphData){
             this.setState({data:this.props.graphData},()=>{
                 this.generateData();

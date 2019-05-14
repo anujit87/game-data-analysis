@@ -5,7 +5,7 @@ import Dashboard from './components/Dashboard';
 import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 
 function App() {
-  console.log('app');
+  //console.log('app');
 
   return (
     <div className="App">

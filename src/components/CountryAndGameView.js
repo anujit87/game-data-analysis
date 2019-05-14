@@ -47,7 +47,7 @@ class CountryAndGameView extends Component{
             }
             revArray.push(totalRevPerDay);
             dauArray.push(totalDauPerDay);
-            console.log(revArray)
+            //console.log(revArray)
             this.setState({revArray:revArray,dauArray:dauArray},()=>{
                 this.createChart();
             })
@@ -133,7 +133,7 @@ class CountryAndGameView extends Component{
     }
 
     componentDidUpdate(prevProps){
-        console.log(this.props)
+        //console.log(this.props)
         if(this.props.graphData!==prevProps.graphData){
             this.setState({data:this.props.graphData},()=>{
                 this.generateData();

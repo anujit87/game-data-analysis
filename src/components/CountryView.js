@@ -19,7 +19,7 @@ class CountryView extends Component{
         let dates=this.state.data.map(date=>date.Date);
         dates=Array.from(new Set(dates));
         //let filterByCountry=this.state.data.filter(data=>data.country==="us");
-        console.log(countries,dates);
+        //console.log(countries,dates);
         let revArray=[];
         let dauArray=[];
         for(let country of countries){
@@ -39,7 +39,7 @@ class CountryView extends Component{
             revArray.push(revPerDay)
             dauArray.push(dauPerDay);
         }
-        console.log(dauArray)
+        //console.log(dauArray)
         this.setState({revArray:revArray,dauArray:dauArray},()=>{
             this.createChart();
         })
@@ -100,7 +100,7 @@ class CountryView extends Component{
                 data:this.state.dauArray[index]
             }]
         })
-        console.log(seriesData.flat())
+        //console.log(seriesData.flat())
         return seriesData.flat();
     }
 
@@ -110,7 +110,7 @@ class CountryView extends Component{
     }
 
     componentDidUpdate(prevProps){
-        console.log(this.props)
+        //console.log(this.props)
         if(this.props.graphData!==prevProps.graphData){
             this.setState({data:this.props.graphData},()=>{
                 this.generateData();
@@ -120,7 +120,7 @@ class CountryView extends Component{
 
 
     render(){
-        console.log(this.state.data)
+        //console.log(this.state.data)
         
         return React.createElement('div',{id:'chart-area'})
     }

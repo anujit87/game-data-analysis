@@ -11,7 +11,7 @@ class Dashboard extends Component{
 
     constructor(props){
         super(props);
-        console.log('dashboard')
+        //console.log('dashboard')
         this.state={
             data:[]
         }
@@ -30,7 +30,7 @@ class Dashboard extends Component{
     } 
 
     render(){
-        console.log(this.state.data)
+        //console.log(this.state.data)
         return(
             
             <div>
